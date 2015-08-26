@@ -40,6 +40,7 @@ RETVAL=0
 case "$1" in
   start)
         echo -n "Starting monit: "
+        ulimit -n 16384
         $MONIT -c $CONFIG -p $PID
         RETVAL=$?
         echo
