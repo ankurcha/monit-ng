@@ -84,7 +84,7 @@ class Chef
           :kind_of => String,
           :callbacks => {
             'does not exceed max arg length' => lambda do |spec|
-              spec.length < 127
+              spec.length < 1024
             end,
           }
         )
@@ -111,7 +111,7 @@ class Chef
           :kind_of => String,
           :callbacks => {
             'does not exceed max arg length' => lambda do |spec|
-              spec.length < 127
+              spec.length < 1024
             end,
           }
         )
